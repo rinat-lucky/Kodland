@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.wrapper-flex-out {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    border: solid #e2e2e2;
+    border-width: 0 2px 2px 2px;
+    border-radius: 0 0 6px 6px;
+}
+
+.wrapper-flex-in {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.item {
+    display: grid;
+    flex-direction: column;
+    width: 300px;
+    &__photo {
+        height: 205px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+        color: #333333;
+    }
+    &__descr {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 15px;
+        color: #666666;
+    }
+    &__price {
+        &-value {
+            font-weight: 500;
+            font-size: 35px;
+            color: #333333;
+            span {
+                font-weight: 300;
+                font-size: 20px;
+            }
+        }
+    }
+    &__cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 40px;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        img {
+            display: block;
+            padding: 10px 12.5px;
+            width: 25px;
+            height: 20px;
+            color: white;
+            background-color: #4ed17b;
+            border-radius: 5px;
+        }
+    }
+}
